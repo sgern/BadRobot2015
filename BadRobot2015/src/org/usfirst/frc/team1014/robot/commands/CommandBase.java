@@ -2,7 +2,10 @@ package com.badrobot.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+
 import org.usfirst.frc.team1014.robot.*;
+import org.usfirst.frc.team1014.robot.subsystems.PrototypeDriveTrain;
+import org.usfirst.frc.team1014.robot.subsystems.interfaces.IDriveTrain;
 
 
 /**
@@ -23,16 +26,12 @@ public abstract class CommandBase extends Command {
         //Final Subsystems
         if (!RobotMap.isPrototype)
         {
-            driveTrain = FinalDriveTrain.getInstance();
-            shooter = FinalShooter.getInstance();
-            gatherer = FinalGatherer.getInstance();
+           // driveTrain = FinalDriveTrain.getInstance();
         }
         //Prototype Subsystems
         else
         {
-            driveTrain = ProtoDriveTrain.getInstance();
-            shooter = ProtoShooter.getInstance();
-            gatherer = ProtoGatherer.getInstance();
+            driveTrain = PrototypeDriveTrain.getInstance();
         }
         
         compressor = CompressorSubsystem.getInstance();
