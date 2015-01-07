@@ -1,7 +1,6 @@
 package org.usfirst.frc.team1014.robot;
 
 import edu.wpi.first.wpilibj.buttons.Button;
-import org.usfirst.frc.team1014.robot.commands.ExampleCommand;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
@@ -15,14 +14,15 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
  */
 public class OI {
 
-	
-	public static Joystick xboxController;
+	public static DriverStation driverStation;
+	public static XboxController xboxController;
 	
 	public static void init()
 	{
 		try
 		{
-			xboxController = new Joystick(1);//needs a proper port
+			driverStation = DriverStation.getInstance();
+			xboxController = new XboxController(1);//needs a proper port
 		} catch (Exception e)
 		{
 			so(e);

@@ -19,22 +19,13 @@ public abstract class CommandBase extends Command {
 
     public static OI oi;
     
-    public static IDriveTrain driveTrain;
+    public static PrototypeDriveTrain driveTrain;
 
     
     public static void init() {
         //Final Subsystems
-        if (!RobotMap.isPrototype)
-        {
-           // driveTrain = FinalDriveTrain.getInstance();
-        }
-        //Prototype Subsystems
-        else
-        {
-            driveTrain = PrototypeDriveTrain.getInstance();
-        }
-        
-        
+    	driveTrain = new PrototypeDriveTrain();
+    	
         // This MUST be here. If the OI creates Commands (which it very likely
         // will), constructing it during the construction of CommandBase (from
         // which commands extend), subsystems are not guaranteed to be
