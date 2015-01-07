@@ -1,5 +1,6 @@
 package org.usfirst.frc.team1014.robot.subsystems;
 
+import org.usfirst.frc.team1014.robot.OI;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
 /**
@@ -35,7 +36,7 @@ public abstract class BadSubsystem extends Subsystem {
      */
     public void log(String out)
     {
-        if (CONSOLE_OUTPUT_ENABLED && OI.CONSOLE_OUTPUT_ENABLED)
+        if (CONSOLE_OUTPUT_ENABLED)
         {
             System.out.println(getConsoleIdentity() + ": " + out);
         }

@@ -10,13 +10,19 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 /*
  * @author Steve Popovich
  */
-public class PrototypeDriveTrain extends Subsystem implements IDriveTrain 
+public class PrototypeDriveTrain extends BadSubsystem
 {
 
 	@Override
-	public void tankDrive(double left, double right) {
+	protected void initialize() {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public String getConsoleIdentity() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override
@@ -29,6 +35,7 @@ public class PrototypeDriveTrain extends Subsystem implements IDriveTrain
 		// TODO Auto-generated method stub
 		return null;
 	}
+
     
 }
 

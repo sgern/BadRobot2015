@@ -1,4 +1,4 @@
-package com.badrobot.commands;
+package org.usfirst.frc.team1014.robot.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
@@ -34,9 +34,6 @@ public abstract class CommandBase extends Command {
             driveTrain = PrototypeDriveTrain.getInstance();
         }
         
-        compressor = CompressorSubsystem.getInstance();
-        //ringLight = RingLight.getInstance();
-        //visionTracking = VisionTracking.getInstance();
         
         // This MUST be here. If the OI creates Commands (which it very likely
         // will), constructing it during the construction of CommandBase (from
