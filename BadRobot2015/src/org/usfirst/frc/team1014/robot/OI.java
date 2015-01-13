@@ -10,7 +10,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
  * This class is the glue that binds the controls on the physical operator
  * interface to the commands and command groups that allow control of the robot.
  * 
- * @author Steve Popovich
+ * @author Team 1014, Dublin Robotics (Bad Robot)
  */
 public class OI {
 
